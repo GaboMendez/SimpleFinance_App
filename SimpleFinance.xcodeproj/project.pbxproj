@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		EEFECB4C2CC44BDF00D78E6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEFECB2F2CC44BDE00D78E6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEFECB362CC44BDE00D78E6A;
+			remoteInfo = SimpleFinance;
+		};
+		EEFECB562CC44BDF00D78E6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEFECB2F2CC44BDE00D78E6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEFECB362CC44BDE00D78E6A;
+			remoteInfo = SimpleFinance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EEFECB372CC44BDE00D78E6A /* SimpleFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEFECB4B2CC44BDF00D78E6A /* SimpleFinanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleFinanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEFECB552CC44BDF00D78E6A /* SimpleFinanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleFinanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EEFECB5D2CC44BDF00D78E6A /* Exceptions for "SimpleFinance" folder in "SimpleFinance" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EEFECB362CC44BDE00D78E6A /* SimpleFinance */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EEFECB392CC44BDE00D78E6A /* SimpleFinance */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EEFECB5D2CC44BDF00D78E6A /* Exceptions for "SimpleFinance" folder in "SimpleFinance" target */,
+			);
+			path = SimpleFinance;
+			sourceTree = "<group>";
+		};
+		EEFECB4E2CC44BDF00D78E6A /* SimpleFinanceTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SimpleFinanceTests;
+			sourceTree = "<group>";
+		};
+		EEFECB582CC44BDF00D78E6A /* SimpleFinanceUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SimpleFinanceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEFECB342CC44BDE00D78E6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFECB482CC44BDF00D78E6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFECB522CC44BDF00D78E6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEFECB2E2CC44BDE00D78E6A = {
+			isa = PBXGroup;
+			children = (
+				EEFECB392CC44BDE00D78E6A /* SimpleFinance */,
+				EEFECB4E2CC44BDF00D78E6A /* SimpleFinanceTests */,
+				EEFECB582CC44BDF00D78E6A /* SimpleFinanceUITests */,
+				EEFECB382CC44BDE00D78E6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEFECB382CC44BDE00D78E6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEFECB372CC44BDE00D78E6A /* SimpleFinance.app */,
+				EEFECB4B2CC44BDF00D78E6A /* SimpleFinanceTests.xctest */,
+				EEFECB552CC44BDF00D78E6A /* SimpleFinanceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEFECB362CC44BDE00D78E6A /* SimpleFinance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEFECB5E2CC44BDF00D78E6A /* Build configuration list for PBXNativeTarget "SimpleFinance" */;
+			buildPhases = (
+				EEFECB332CC44BDE00D78E6A /* Sources */,
+				EEFECB342CC44BDE00D78E6A /* Frameworks */,
+				EEFECB352CC44BDE00D78E6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EEFECB392CC44BDE00D78E6A /* SimpleFinance */,
+			);
+			name = SimpleFinance;
+			packageProductDependencies = (
+			);
+			productName = SimpleFinance;
+			productReference = EEFECB372CC44BDE00D78E6A /* SimpleFinance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EEFECB4A2CC44BDF00D78E6A /* SimpleFinanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEFECB632CC44BDF00D78E6A /* Build configuration list for PBXNativeTarget "SimpleFinanceTests" */;
+			buildPhases = (
+				EEFECB472CC44BDF00D78E6A /* Sources */,
+				EEFECB482CC44BDF00D78E6A /* Frameworks */,
+				EEFECB492CC44BDF00D78E6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEFECB4D2CC44BDF00D78E6A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EEFECB4E2CC44BDF00D78E6A /* SimpleFinanceTests */,
+			);
+			name = SimpleFinanceTests;
+			packageProductDependencies = (
+			);
+			productName = SimpleFinanceTests;
+			productReference = EEFECB4B2CC44BDF00D78E6A /* SimpleFinanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EEFECB542CC44BDF00D78E6A /* SimpleFinanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEFECB662CC44BDF00D78E6A /* Build configuration list for PBXNativeTarget "SimpleFinanceUITests" */;
+			buildPhases = (
+				EEFECB512CC44BDF00D78E6A /* Sources */,
+				EEFECB522CC44BDF00D78E6A /* Frameworks */,
+				EEFECB532CC44BDF00D78E6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEFECB572CC44BDF00D78E6A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EEFECB582CC44BDF00D78E6A /* SimpleFinanceUITests */,
+			);
+			name = SimpleFinanceUITests;
+			packageProductDependencies = (
+			);
+			productName = SimpleFinanceUITests;
+			productReference = EEFECB552CC44BDF00D78E6A /* SimpleFinanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEFECB2F2CC44BDE00D78E6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					EEFECB362CC44BDE00D78E6A = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					EEFECB4A2CC44BDF00D78E6A = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = EEFECB362CC44BDE00D78E6A;
+					};
+					EEFECB542CC44BDF00D78E6A = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = EEFECB362CC44BDE00D78E6A;
+					};
+				};
+			};
+			buildConfigurationList = EEFECB322CC44BDE00D78E6A /* Build configuration list for PBXProject "SimpleFinance" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEFECB2E2CC44BDE00D78E6A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EEFECB382CC44BDE00D78E6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEFECB362CC44BDE00D78E6A /* SimpleFinance */,
+				EEFECB4A2CC44BDF00D78E6A /* SimpleFinanceTests */,
+				EEFECB542CC44BDF00D78E6A /* SimpleFinanceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEFECB352CC44BDE00D78E6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFECB492CC44BDF00D78E6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFECB532CC44BDF00D78E6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEFECB332CC44BDE00D78E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFECB472CC44BDF00D78E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFECB512CC44BDF00D78E6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEFECB4D2CC44BDF00D78E6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEFECB362CC44BDE00D78E6A /* SimpleFinance */;
+			targetProxy = EEFECB4C2CC44BDF00D78E6A /* PBXContainerItemProxy */;
+		};
+		EEFECB572CC44BDF00D78E6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEFECB362CC44BDE00D78E6A /* SimpleFinance */;
+			targetProxy = EEFECB562CC44BDF00D78E6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EEFECB5F2CC44BDF00D78E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleFinance/SimpleFinance.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleFinance/Preview Content\"";
+				DEVELOPMENT_TEAM = KH7D2YUBPG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleFinance/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libranner.SimpleFinance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EEFECB602CC44BDF00D78E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleFinance/SimpleFinance.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SimpleFinance/Preview Content\"";
+				DEVELOPMENT_TEAM = KH7D2YUBPG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleFinance/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libranner.SimpleFinance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EEFECB612CC44BDF00D78E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEFECB622CC44BDF00D78E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEFECB642CC44BDF00D78E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KH7D2YUBPG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libranner.SimpleFinanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleFinance.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleFinance";
+			};
+			name = Debug;
+		};
+		EEFECB652CC44BDF00D78E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KH7D2YUBPG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libranner.SimpleFinanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleFinance.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleFinance";
+			};
+			name = Release;
+		};
+		EEFECB672CC44BDF00D78E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KH7D2YUBPG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libranner.SimpleFinanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleFinance;
+			};
+			name = Debug;
+		};
+		EEFECB682CC44BDF00D78E6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KH7D2YUBPG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libranner.SimpleFinanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleFinance;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEFECB322CC44BDE00D78E6A /* Build configuration list for PBXProject "SimpleFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFECB612CC44BDF00D78E6A /* Debug */,
+				EEFECB622CC44BDF00D78E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEFECB5E2CC44BDF00D78E6A /* Build configuration list for PBXNativeTarget "SimpleFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFECB5F2CC44BDF00D78E6A /* Debug */,
+				EEFECB602CC44BDF00D78E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEFECB632CC44BDF00D78E6A /* Build configuration list for PBXNativeTarget "SimpleFinanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFECB642CC44BDF00D78E6A /* Debug */,
+				EEFECB652CC44BDF00D78E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEFECB662CC44BDF00D78E6A /* Build configuration list for PBXNativeTarget "SimpleFinanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFECB672CC44BDF00D78E6A /* Debug */,
+				EEFECB682CC44BDF00D78E6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEFECB2F2CC44BDE00D78E6A /* Project object */;
+}
