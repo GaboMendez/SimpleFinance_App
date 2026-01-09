@@ -61,8 +61,4 @@ final class LocalPersistenceService : PersitenceServing {
   }
 }
 
-// RemotePersistanceService
-
-// Protocol PersitenceServing
-
 // SPLASH SCREEN WITH ANIMATIONS
