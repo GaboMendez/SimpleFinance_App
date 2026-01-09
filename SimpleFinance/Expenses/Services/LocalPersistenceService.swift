@@ -17,8 +17,8 @@ final class LocalPersistenceService : PersitenceServing {
 
   private(set) var expenses: [Expense] = []
 
-  func load() {
-    expenses = getAll()
+  func load() async throws {
+    expenses = try await getAll()
   }
 
   func getAll() -> [Expense] {
@@ -29,26 +29,26 @@ final class LocalPersistenceService : PersitenceServing {
     return []
   }
 
-  func add(_ expense: Expense) {
+  func add(_ expense: Expense) async throws {
     expenses.append(expense)
     saveExpenses()
   }
 
-  func update(_ expense: Expense) {
+  func update(_ expense: Expense) async throws {
     if let index = expenses.firstIndex(where: { $0.id == expense.id }) {
       expenses[index] = expense
       saveExpenses()
     }
   }
 
-  func delete(_ expense: Expense) {
+  func delete(_ expense: Expense) async throws {
     if let index = expenses.firstIndex(where: { $0.id == expense.id }) {
       expenses.remove(at: index)
       saveExpenses()
     }
   }
 
-  func delete(_ ids: [UUID]) {
+  func delete(_ ids: [UUID]) async throws {
     expenses.removeAll(where: { ids.contains($0.id) })
     saveExpenses()
   }

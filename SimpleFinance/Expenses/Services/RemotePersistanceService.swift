@@ -9,6 +9,9 @@ import Foundation
 
 @Observable
 final class RemotePersistenceService: PersitenceServing {
+    static let shared = RemotePersistenceService()
+    
+    private init() {}
     
     private(set) var expenses: [Expense] = []
     private let baseURL = "http://localhost:3000"
