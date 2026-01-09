@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  expense-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Map container port 3000 to host port 3000
+    volumes:
+      - .:/app
+      - /app/node_modules # Exclude node_modules from being overwritten
