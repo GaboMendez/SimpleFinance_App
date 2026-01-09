@@ -100,7 +100,7 @@ server/
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd Proyecto
+cd SimpleFinance_App
 ```
 
 ### 2. Setup Backend Server
@@ -123,7 +123,7 @@ docker-compose up -d
 
 1. Open the Xcode project:
 ```bash
-cd SimpleFinance
+cd SimpleFinance_App
 open SimpleFinance.xcodeproj
 ```
 
