@@ -14,7 +14,7 @@ var viewModel: ExpenseViewModel
     self.viewModel =  ExpenseViewModel(
         isNewExpense: false,
         expense: expense,
-        persistentService: LocalPersistenceService.shared
+        persistentService: RemotePersistenceService.shared
       )
   }
 
@@ -24,7 +24,7 @@ var viewModel: ExpenseViewModel
 }
 
 struct NewExpenseFormView: View {
-  var viewModel = ExpenseViewModel(isNewExpense: true, persistentService: LocalPersistenceService.shared)
+  var viewModel = ExpenseViewModel(isNewExpense: true, persistentService: RemotePersistenceService.shared)
 
   var body: some View {
     ExpenseFormView(viewModel: viewModel)
@@ -125,8 +125,10 @@ struct ExpenseFormView: View {
       .toolbar {
         ToolbarItem(placement: .confirmationAction) {
           Button("Save") {
-            viewModel.addExpense()
-            dismiss()
+            Task {
+              await viewModel.addExpense()
+              dismiss()
+            }
           }
         }
         ToolbarItem(placement: .cancellationAction) {

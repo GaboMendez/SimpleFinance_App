@@ -10,22 +10,37 @@ import Observation
 
 @Observable
 class ExpenseListViewModel {
-  private let persistenceService: LocalPersistenceService
+  private let persistenceService: PersitenceServing
   var expenses: [Expense] {
     persistenceService.expenses
   }
 
-  init(persistenceService: LocalPersistenceService) {
+  init(persistenceService: PersitenceServing) {
     self.persistenceService = persistenceService
-    self.persistenceService.load()
+  }
+  
+  func load() async {
+    do {
+      try await persistenceService.load()
+    } catch {
+      print("Error loading expenses: \(error)")
+    }
   }
 
-  func delete(_ expense: Expense) {
-    persistenceService.delete(expense)
+  func delete(_ expense: Expense) async {
+    do {
+      try await persistenceService.delete(expense)
+    } catch {
+      print("Error deleting expense: \(error)")
+    }
   }
 
-  func delete(_ ids: [UUID]) {
-    persistenceService.delete(ids)
+  func delete(_ ids: [UUID]) async {
+    do {
+      try await persistenceService.delete(ids)
+    } catch {
+      print("Error deleting expenses: \(error)")
+    }
   }
 }
 

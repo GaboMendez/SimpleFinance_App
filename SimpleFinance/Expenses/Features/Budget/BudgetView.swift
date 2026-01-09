@@ -49,9 +49,14 @@ struct BudgetView: View {
       }
     }
     .navigationTitle("Budget")
-    .onAppear {
-      let service = LocalPersistenceService.shared
-      expensesAmount = service.expenses.reduce(0) { $0 + $1.amount }
+    .task {
+      let service = RemotePersistenceService.shared
+      do {
+        try await service.load()
+        expensesAmount = service.expenses.reduce(0) { $0 + $1.amount }
+      } catch {
+        print("Error loading expenses: \(error)")
+      }
     }
   }
 

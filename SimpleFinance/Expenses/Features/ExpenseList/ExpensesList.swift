@@ -14,7 +14,7 @@ import Charts
 
 struct ExpenseListView: View {
   private var viewModel = ExpenseListViewModel(
-    persistenceService: LocalPersistenceService.shared
+    persistenceService: RemotePersistenceService.shared
   )
   @State private var showExpenseForm = false
   @State private var showingAlert = false
@@ -62,7 +62,9 @@ struct ExpenseListView: View {
     .alert("Delete Expense", isPresented: $showingAlert) {
       Button("Delete", role: .destructive) {
         if let expenseToDelete {
-          viewModel.delete(expenseToDelete)
+          Task {
+            await viewModel.delete(expenseToDelete)
+          }
         }
       }
 
@@ -71,6 +73,9 @@ struct ExpenseListView: View {
       }
     }
     .navigationTitle("Expenses")
+    .task {
+      await viewModel.load()
+    }
     .toolbar {
       ToolbarItem(placement: .topBarLeading) {
         EditButton()
@@ -79,7 +84,9 @@ struct ExpenseListView: View {
       ToolbarItemGroup(placement: .topBarTrailing) {
         if !selection.isEmpty {
           Button {
-            viewModel.delete(Array(selection))
+            Task {
+              await viewModel.delete(Array(selection))
+            }
           } label: {
             Image(systemName: "trash")
           }

@@ -7,12 +7,12 @@ class ExpenseViewModel {
   let isNewExpense: Bool
   private(set) var tempAttachmentData: (data: Data, fileName: String, contentType: String)?
 
-  private let persistentService: LocalPersistenceService
+  private let persistentService: PersitenceServing
 
   init(
     isNewExpense: Bool,
     expense: Expense = .init(note: "", type: .food, amount: 0),
-    persistentService: LocalPersistenceService
+    persistentService: PersitenceServing
   ) {
     self.expense = expense
     self.isNewExpense = isNewExpense
@@ -70,15 +70,19 @@ class ExpenseViewModel {
     }
   }
 
-  func addExpense() {
+  func addExpense() async {
     if tempAttachmentData != nil {
       saveAttachment()
     }
 
-    if isNewExpense {
-      persistentService.add(expense)
-    } else {
-      persistentService.update(expense)
+    do {
+      if isNewExpense {
+        try await persistentService.add(expense)
+      } else {
+        try await persistentService.update(expense)
+      }
+    } catch {
+      print("Error saving expense: \(error)")
     }
   }
 }

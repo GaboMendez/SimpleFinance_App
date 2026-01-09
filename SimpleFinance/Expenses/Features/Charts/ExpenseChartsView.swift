@@ -49,16 +49,20 @@ struct ExpenseChartsView: View {
         }
       }
       .padding()
-      .onAppear {
-        let expenses = LocalPersistenceService.shared.getAll()
-        let report = ExpenseReportService(expenses: expenses)
+      .task {
+        do {
+          let expenses = try await RemotePersistenceService.shared.getAll()
+          let report = ExpenseReportService(expenses: expenses)
 
-        expenseByMonth = report.expensesByMonth()
-        expenseTypeByMonth = report.expenseTypeByMonth()
-        expeseByType = report.expensesByType()
+          expenseByMonth = report.expensesByMonth()
+          expenseTypeByMonth = report.expenseTypeByMonth()
+          expeseByType = report.expensesByType()
 
-        withAnimation(.easeOut(duration: 1.0)) {
-          animateChart = true
+          withAnimation(.easeOut(duration: 1.0)) {
+            animateChart = true
+          }
+        } catch {
+          print("Error loading expenses: \(error)")
         }
       }
     }
