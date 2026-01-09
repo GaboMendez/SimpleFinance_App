@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExpenseRow: View {
     let expense: Expense
+    @State private var isPressed = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -43,7 +44,13 @@ struct ExpenseRow: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+                .transition(.scale.combined(with: .opacity))
             }
         }
+        .scaleEffect(isPressed ? 0.97 : 1.0)
+        .animation(.easeInOut(duration: 0.2), value: isPressed)
+        .onLongPressGesture(minimumDuration: 0.1, pressing: { pressing in
+            isPressed = pressing
+        }, perform: {})
     }
 }

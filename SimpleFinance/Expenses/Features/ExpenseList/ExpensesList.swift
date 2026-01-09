@@ -43,7 +43,12 @@ struct ExpenseListView: View {
             }
             .tint(.blue)
           }
+          .transition(.asymmetric(
+            insertion: .move(edge: .trailing).combined(with: .opacity),
+            removal: .move(edge: .leading).combined(with: .opacity)
+          ))
     }
+    .animation(.easeInOut(duration: 0.3), value: viewModel.expenses)
     .sheet(isPresented: $showExpenseForm) {
       NewExpenseFormView()
         .presentationDetents([.large])
