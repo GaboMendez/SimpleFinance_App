@@ -8,7 +8,7 @@
 import Foundation
 
 @Observable
-final class LocalPersistenceService {
+final class LocalPersistenceService : PersitenceServing {
   static let shared = LocalPersistenceService()
 
   private init() {}
