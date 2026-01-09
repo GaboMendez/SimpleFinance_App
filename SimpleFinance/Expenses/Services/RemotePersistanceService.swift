@@ -41,11 +41,11 @@ final class RemotePersistenceService: PersitenceServing {
         let (_, response) = try await URLSession.shared.data(for: request)
         try validateResponse(response)
         
-        expenses.append(expense)
+        try await load()
     }
     
     func update(_ expense: Expense) async throws {
-        let url = try buildURL(path: "/expenses/\(expense.id.uuidString)")
+        let url = try buildURL(path: "/expenses/\(expense.id.uuidString.lowercased())")
         var request = URLRequest(url: url)
         request.httpMethod = "PUT"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -54,20 +54,18 @@ final class RemotePersistenceService: PersitenceServing {
         let (_, response) = try await URLSession.shared.data(for: request)
         try validateResponse(response)
         
-        if let index = expenses.firstIndex(where: { $0.id == expense.id }) {
-            expenses[index] = expense
-        }
+        try await load()
     }
     
     func delete(_ expense: Expense) async throws {
-        let url = try buildURL(path: "/expenses/\(expense.id.uuidString)")
+        let url = try buildURL(path: "/expenses/\(expense.id.uuidString.lowercased())")
         var request = URLRequest(url: url)
         request.httpMethod = "DELETE"
         
         let (_, response) = try await URLSession.shared.data(for: request)
         try validateResponse(response)
         
-        expenses.removeAll(where: { $0.id == expense.id })
+        try await load()
     }
     
     func delete(_ ids: [UUID]) async throws {
@@ -76,13 +74,13 @@ final class RemotePersistenceService: PersitenceServing {
         request.httpMethod = "DELETE"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let requestBody = DeleteExpensesRequest(ids: ids.map { $0.uuidString })
+        let requestBody = DeleteExpensesRequest(ids: ids.map { $0.uuidString.lowercased() })
         request.httpBody = try JSONEncoder().encode(requestBody)
         
         let (_, response) = try await URLSession.shared.data(for: request)
         try validateResponse(response)
         
-        expenses.removeAll(where: { ids.contains($0.id) })
+        try await load()
     }
     
     // MARK: - Private Helpers
