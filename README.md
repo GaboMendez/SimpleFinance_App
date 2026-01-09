@@ -123,7 +123,7 @@ docker-compose up -d
 
 1. Open the Xcode project:
 ```bash
-cd SimpleFinance_App
+cd mobile
 open SimpleFinance.xcodeproj
 ```
 
