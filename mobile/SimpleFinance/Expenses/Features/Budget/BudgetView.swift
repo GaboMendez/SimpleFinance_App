@@ -50,7 +50,7 @@ struct BudgetView: View {
     }
     .navigationTitle("Budget")
     .task {
-      let service = RemotePersistenceService.shared
+      let service = CoreDataPersistenceService.shared
       do {
         try await service.load()
         expensesAmount = service.expenses.reduce(0) { $0 + $1.amount }

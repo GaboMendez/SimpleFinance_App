@@ -61,7 +61,7 @@ struct ExpenseChartsView: View {
       .padding()
       .task {
         do {
-          let expenses = try await RemotePersistenceService.shared.getAll()
+          let expenses = try await CoreDataPersistenceService.shared.getAll()
           let report = ExpenseReportService(expenses: expenses)
 
           expenseByMonth = report.expensesByMonth()

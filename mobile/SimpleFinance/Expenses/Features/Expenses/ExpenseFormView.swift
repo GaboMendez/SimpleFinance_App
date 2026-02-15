@@ -14,7 +14,7 @@ struct EditExpenseFormView: View {
         self.viewModel =  ExpenseViewModel(
             isNewExpense: false,
             expense: expense,
-            persistentService: RemotePersistenceService.shared
+            persistentService: CoreDataPersistenceService.shared
         )
     }
     
@@ -24,7 +24,7 @@ struct EditExpenseFormView: View {
 }
 
 struct NewExpenseFormView: View {
-    var viewModel = ExpenseViewModel(isNewExpense: true, persistentService: RemotePersistenceService.shared)
+    var viewModel = ExpenseViewModel(isNewExpense: true, persistentService: CoreDataPersistenceService.shared)
     
     var body: some View {
         ExpenseFormView(viewModel: viewModel)

@@ -14,7 +14,7 @@ import Charts
 
 struct ExpenseListView: View {
   private var viewModel = ExpenseListViewModel(
-    persistenceService: RemotePersistenceService.shared
+    persistenceService: CoreDataPersistenceService.shared
   )
   @State private var showExpenseForm = false
   @State private var showingAlert = false
