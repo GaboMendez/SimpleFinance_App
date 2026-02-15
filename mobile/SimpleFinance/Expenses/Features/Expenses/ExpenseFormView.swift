@@ -178,14 +178,15 @@ struct ExpenseFormView: View {
             }
             .sheet(isPresented: $showingLocationPicker) {
                 LocationPickerView(
+                    onLocationSelected: { locationInfo in
+                        if locationInfo.latitude == 0 && locationInfo.longitude == 0 {
+                            viewModel.updateLocation(nil)
+                        } else {
+                            viewModel.updateLocation(locationInfo)
+                        }
+                    },
                     currentLocation: viewModel.expense.locationInfo
-                ) { locationInfo in
-                    if locationInfo.latitude == 0 && locationInfo.longitude == 0 {
-                        viewModel.updateLocation(nil)
-                    } else {
-                        viewModel.updateLocation(locationInfo)
-                    }
-                }
+                )
             }
             .fileImporter(
                 isPresented: $showingDocumentPicker,

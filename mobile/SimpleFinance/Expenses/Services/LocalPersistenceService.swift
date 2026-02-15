@@ -17,8 +17,8 @@ final class LocalPersistenceService : PersitenceServing {
 
   private(set) var expenses: [Expense] = []
 
-  func load() async throws {
-    expenses = try await getAll()
+  func load() {
+    expenses = getAll()
   }
 
   func getAll() -> [Expense] {

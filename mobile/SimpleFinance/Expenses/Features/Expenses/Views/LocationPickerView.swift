@@ -11,32 +11,27 @@ import MapKit
 struct LocationPickerView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var locationManager = CLLocationManager()
-    @State private var cameraPosition: MapCameraPosition
+    @State private var cameraPosition: MapCameraPosition = .automatic
     @State private var selectedCoordinate: CLLocationCoordinate2D?
     @State private var locationName: String = ""
     
     let onLocationSelected: (LocationInfo) -> Void
     let currentLocation: LocationInfo?
     
-    init(currentLocation: LocationInfo?, onLocationSelected: @escaping (LocationInfo) -> Void) {
-        self.currentLocation = currentLocation
-        self.onLocationSelected = onLocationSelected
-        
+    // Computed property for initial camera position
+    private var initialCameraPosition: MapCameraPosition {
         if let location = currentLocation, location.latitude != 0 || location.longitude != 0 {
             let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-            _selectedCoordinate = State(initialValue: coordinate)
-            _locationName = State(initialValue: location.name ?? "")
-            _cameraPosition = State(initialValue: .region(MKCoordinateRegion(
+            return .region(MKCoordinateRegion(
                 center: coordinate,
                 span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-            )))
+            ))
         } else {
-            // Default to San Francisco if no location
             let defaultCoordinate = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
-            _cameraPosition = State(initialValue: .region(MKCoordinateRegion(
+            return .region(MKCoordinateRegion(
                 center: defaultCoordinate,
                 span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-            )))
+            ))
         }
     }
     
@@ -119,6 +114,15 @@ struct LocationPickerView: View {
                         }
                     }
                 }
+            }
+            .onAppear {
+                // Initialize state from current location if available
+                if let location = currentLocation, location.latitude != 0 || location.longitude != 0 {
+                    let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+                    selectedCoordinate = coordinate
+                    locationName = location.name ?? ""
+                }
+                cameraPosition = initialCameraPosition
             }
         }
     }
